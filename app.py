@@ -7,7 +7,10 @@ app = Flask(__name__)
 def root():
     return render_template('index.html')
 
-
+@app.route("/first")
+def first_pr():
+    return render_template('prs/first.html')
+  
 @app.route("/second")
 def second_pr():
     return render_template('prs/second.html')
